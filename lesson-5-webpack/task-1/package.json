@@ -2,10 +2,10 @@
   "name": "task-1",
   "version": "1.0.0",
   "description": "",
-  "main": "1.js",
+  "main": "index.js",
   "scripts": {
-    "build:scripts": "webpack -p",
-    "watch:scripts": "webpack -d --devtool eval-source-map -w"
+    "build:scripts": "webpack --mode=production",
+    "watch:scripts": "webpack --mode=development --devtool eval-source-map -w"
   },
   "keywords": [],
   "author": "",
