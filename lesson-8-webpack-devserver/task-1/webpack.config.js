@@ -10,11 +10,11 @@ module.exports = (env, argv) => {
     },
     module: {
       rules: [{
-          test: /.s?css$/,
+          test: /\.s?css$/i,
           use: [
             isProduction
-            ? MiniCssExtractPlugin
-            : 'style-loader', 
+              ? MiniCssExtractPlugin.loader
+              : 'style-loader', 
             'css-loader', 
             'sass-loader'
           ],
@@ -46,8 +46,8 @@ module.exports = (env, argv) => {
   if (isProduction) {
     config.plugins.push(new MiniCssExtractPlugin({
       filename: '[name].css',
-    }))
-  };
-  
+    }));
+  }
+
   return config;
 };
